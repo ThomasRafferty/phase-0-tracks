@@ -1,4 +1,4 @@
-/* You can use an HTML tag as a selector ... */
+op/* You can use an HTML tag as a selector ... */
 
 html {
   background-image: url("../images/wov.png");
@@ -24,9 +24,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica", sans-serif;
 }
 
-/* 
+/*
 
-You can select a class (preceded by a period) 
+You can select a class (preceded by a period)
 or ID (preceded by a hash).
 
 In HTML, a class is assigned like this:
@@ -63,4 +63,13 @@ is nested inside the contact-info section) */
 
 #contact-info p {
   line-height: .8;
+}
+.job{
+  background-color:#e9e5dc;
+  border-radius: 20px;
+  margin:  20px;
+  padding: 10px;
+}
+.small_text{
+  font-size: .8em;
 }
