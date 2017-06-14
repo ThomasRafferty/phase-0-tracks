@@ -16,7 +16,7 @@ a:active{
   color:green;
 }
 
-
+/* These are to affect child elements within elements*/
 section > section{
   color:blue;
 }
