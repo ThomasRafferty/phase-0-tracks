@@ -15,3 +15,12 @@ a:hover{
 a:active{
   color:green;
 }
+
+
+section > section{
+  color:blue;
+}
+
+ul>li {
+  color:green;
+}
