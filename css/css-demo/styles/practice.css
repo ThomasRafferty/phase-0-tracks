@@ -1,0 +1,26 @@
+/* These are pseudoselectors */
+
+a:link {
+  color:blue;
+}
+
+a:visited {
+  color:red;
+}
+
+a:hover{
+  color:grey;
+}
+
+a:active{
+  color:green;
+}
+
+/* These are to affect child elements within elements*/
+section > section{
+  color:blue;
+}
+
+ul>li {
+  color:green;
+}
