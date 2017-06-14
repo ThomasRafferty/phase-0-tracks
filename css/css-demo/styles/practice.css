@@ -1,0 +1,17 @@
+/* These are pseudoselectors */
+
+a:link {
+  color:blue;
+}
+
+a:visited {
+  color:red;
+}
+
+a:hover{
+  color:grey;
+}
+
+a:active{
+  color:green;
+}
