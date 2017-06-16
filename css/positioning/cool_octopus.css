@@ -1,0 +1,19 @@
+#octopus {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+}
+
+#hat {
+  position: absolute;
+  top: 4%;
+  left: 33%;
+  z-index: 1;
+}
+
+#glasses {
+  position: absolute;
+  top: 36%;
+  left: 41%;
+  z-index: 1;
+}
