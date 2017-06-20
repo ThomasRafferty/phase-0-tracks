@@ -1,3 +1,21 @@
-h1 {
-  color: red;
+header {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+.column-1{
+    width: 48%;
+    display: inline-block;
+}
+
+.column-2 {
+  width: 48%;
+  display: inline-block;
+}
+
+footer {
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid black;
 }
