@@ -4,7 +4,20 @@ header {
   border-bottom: 1px solid black;
 }
 .container{
-  text-align: right;
+  text-align: right top;
+  display: inline-block;
+}
+
+.header_info{
+  text-align: center;
+  display: inline-block;
+  width:70%;
+}
+
+#title_info{
+  padding-top: 25px;
+    color: gold;
+  background-color:purple;
 }
 
 .column-1{
