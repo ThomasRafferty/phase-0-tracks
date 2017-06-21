@@ -1,0 +1,20 @@
+- For using elevator
+	- enter elevator
+	- Determine floor need
+		- Check email for “Floor” in address given my email invitation to office
+		- If no floor found, google address of “Company Visiting”
+		- If no address found, call number found in email
+		- If no number found call number from google
+	- Determine layout of floors in elevator panel
+		- Press floor required
+	- Impatiently press close door button, even though most likely disabled
+	- Wait until doors open
+		- Check to see if your floor
+			-If not, politely asks which floor for entering person
+			-Wait three seconds for response
+				- Determine layout of floors in elevator panel
+					- Press floor required
+			- If no response, step aside for other person to press button
+		- If your floor exit the elevator
+
+
