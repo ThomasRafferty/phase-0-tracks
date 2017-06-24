@@ -4,7 +4,6 @@ def encrypt(string)
   string[0].next + string[1].next + string[2].next
 end
 
-puts encrypt("abc")
 
 def decrypt(string2)
   first_letter = string2[0]
@@ -20,5 +19,9 @@ def decrypt(string2)
   print "#{new_letter_1}"+"#{new_letter_2}"+"#{new_letter_3}"
 end
 
+puts encrypt("abc")
+puts encrypt("zed")
 puts decrypt("bcd")
+puts decrypt("afe")
+
 
