@@ -14,23 +14,40 @@ age_based_on_birth_year = (2017 - birth_year)
     correct_age = false
   end
 
-puts "Our company cafeteria is know for its amazing garlic bread.  Should we order you some? (yes/no)"
-garlic_bread_preferance = gets.chomp
 
-  if garlic_bread_preferance == yes
-    likes_garlic = true
-  else
-    likes_garlic = false
-  end
+garlic_input = false
+until garlic_input
+  puts "Our company cafeteria is know for its amazing garlic bread.  Should we order you some? (yes/no)"
+    garlic_bread_preferance = gets.chomp
+      if garlic_bread_preferance == "yes"
+        likes_garlic = true
+        garlic_input = ture
+      elsif garlic_bread_preferance == "no"
+        likes_garlic = false
+        garlic_input = true
+      else
+        puts "Not valid answer, please answer yes or no."
+      end
+end
 
-puts "Would you like to enroll in our company's health care plan? (yes/no)"
-healthcare_preferance = gets.chomp
+healthcare_input = false
+until healthcare_input
+  puts "Would you like to enroll in our company's health care plan? (yes/no)"
+  healthcare_preferance = gets.chomp
+    if healthcare_preferance == "yes"
+      needs_healthcare = true
+      healthcare_input = true
+    elsif healthcare_preferance == "no"
+      needs_healthcare = false
+      healthcare_input = true
+    else
+      puts "Not valid answer, please answer yes or no."
+    end
+end
 
-  if healthcare_preferance == yes
-    needs_healthcare = true
-  else
-    needs_healthcare = false
-  end
+
+
+
 
 valid_input = false
 
