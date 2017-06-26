@@ -2,7 +2,6 @@ puts "How many employees will be processed?"
 employees_processed = gets.chomp.to_i
 entry_counter = 0
 until employees_processed == entry_counter
-
   puts "What is your name?"
   name = gets.chomp
 
