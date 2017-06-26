@@ -3,8 +3,14 @@
 def encrypt(string_e)
   index = 0
   while index < string_e.length
-    string_e[index] = string_e[index].next!
-    index += 1
+  z_score = string_e.index"z"
+    if z_score != nil
+      string_e[index] = "a"
+      index += 1
+    else
+      string_e[index] = string_e[index].next!
+      index += 1
+    end
   end
   puts string_e
 end
@@ -23,9 +29,9 @@ end
 
 
 
-puts encrypt("abc")
+#puts encrypt("abc")
 puts encrypt("zed")
-puts decrypt("bcd")
-puts decrypt("afe")
+#puts decrypt("bcd")
+#puts decrypt("afe")
 
 # puts decrypt(encrypt("swordfish"))
