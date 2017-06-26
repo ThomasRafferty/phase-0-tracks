@@ -7,13 +7,11 @@ age = gets.chomp.to_i
 puts "What year where you born?"
 birth_year = gets.chomp.to_i
 age_based_on_birth_year = (2017 - birth_year)
-
   if age == age_based_on_birth_year
     correct_age = true
   else
     correct_age = false
   end
-
 
 garlic_input = false
 until garlic_input
@@ -21,7 +19,7 @@ until garlic_input
     garlic_bread_preferance = gets.chomp
       if garlic_bread_preferance == "yes"
         likes_garlic = true
-        garlic_input = ture
+        garlic_input = true
       elsif garlic_bread_preferance == "no"
         likes_garlic = false
         garlic_input = true
@@ -45,14 +43,25 @@ until healthcare_input
     end
 end
 
-
-
-
-
 valid_input = false
-
 until valid_input
-
-  if (correct_age && )
-
+  if
+    (name == "Drake Cula" || name == "Tu Fang")
+    puts "Defiantly a vampire"
+    valid_input = true
+  if correct_age && (likes_garlic ||needs_healthcare)
+    puts "Probably not a vampire."
+    valid_input = true
+  elsif
+    correct_age == false && likes_garlic == false && needs_healthcare == false
+    puts "Defiantly a vampire."
+    valid_input = true
+  elsif
+    (correct_age == false) && (likes_garlic == false || needs_healthcare == false)
+    puts "Probably a vampire."
+    valid_input = true
+  else
+    puts "Results inclusive"
+    valid_input = true
+  end
 end
