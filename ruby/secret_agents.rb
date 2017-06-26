@@ -1,17 +1,15 @@
 # Use the indexed letters from the string to allow us to us the ".next" method to move every letter forward one.
 
 def encrypt(string)
-  z_score = string.index"z"
-  if z_score == 0
-    "a" + string[1].next + string[2].next
-  elsif z_score == 1
-    string[0].next + "a" + string[2].next
-  elsif z_score == 2
-    string[0].next + string[1].next + "a"
-  else
-    string[0].next + string[1].next + string[2].next
+  index = 0
+  while index < string.length
+    string[index] = string[index].next!
+    index += 1
   end
+  puts string
 end
+
+encrypt("car")
 
 
 def decrypt(string2)
