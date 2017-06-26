@@ -1,7 +1,7 @@
 puts "How many employees will be processed?"
 employees_processed = gets.chomp.to_i
-counter = 0
-until employees_processed == counter
+entry_counter = 0
+until employees_processed == entry_counter
 
   puts "What is your name?"
   name = gets.chomp
@@ -48,9 +48,23 @@ until employees_processed == counter
       end
   end
 
+  allergy_input = false
+  until allergy_input
+    allergy = nil
+    until allergy == "done" || allergy == "sunshine"
+    puts "Please list your allergies individually   then  press enter. Once you are finished please   input  done."
+    allergy = gets.chomp
+    end
+  allergy_input = true
+  end
+
   valid_input = false
   until valid_input
-    if
+    if allergy == "sunshine"
+      puts "Defiantly a vampire"
+      puts ""
+      valid_input = true
+    elsif
       name == "Drake Cula" || name == "Tu Fang" ||  name == "drake cula" || name == "tu fang"
       puts "Defiantly a vampire"
       puts ""
@@ -76,5 +90,5 @@ until employees_processed == counter
       valid_input = true
     end
   end
-  counter += 1
+  entry_counter += 1
 end
