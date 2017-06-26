@@ -1,3 +1,5 @@
+# Note: Was unable to figure out nested methods, output of first method was not accepted by second.  See line 40 for further comment.
+
 # Use the indexed letters from the string to allow us to us the ".next" method to move every letter forward one.
 
 def encrypt(string_e)
@@ -29,11 +31,13 @@ def decrypt(string_d)
   puts string_d
 end
 
-puts encrypt("swordfish")
-#puts encrypt("abc")
-#puts decrypt("bcd")
-#puts decrypt("afe")
-puts decrypt(encrypt("swordfish"))
-#The nested method call above works by first encrypt the message -in this case txpsegjti- using the first method, fulfilling its purpose of keeping state secrets safe.  Then it decrypted using our supper secret decrypting software that should be protected at all costs.
+
+puts encrypt("abc")
+puts encrypt("zed")
+puts decrypt("bcd")
+puts decrypt("afe")
+#puts decrypt(encrypt("swordfish"))
+#The nested method call above does NOT work.  It does not appear to take the nested method output as a legitimate input for the second method.  Rather, a NoMethodError was returned in regards to line 25 in regards to .length method used loop through the index.  Could not figure out why this did not work.
+
 
 #Our Driver Code
