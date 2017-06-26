@@ -46,10 +46,11 @@ end
 valid_input = false
 until valid_input
   if
-    (name == "Drake Cula" || name == "Tu Fang")
+    name == "Drake Cula" || name == "Tu Fang" || name == "drake cula" || name == "tu fang"
     puts "Defiantly a vampire"
     valid_input = true
-  if correct_age && (likes_garlic ||needs_healthcare)
+  elsif
+      correct_age && (likes_garlic ||needs_healthcare)
     puts "Probably not a vampire."
     valid_input = true
   elsif
