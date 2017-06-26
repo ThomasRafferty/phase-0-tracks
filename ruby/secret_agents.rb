@@ -1,34 +1,31 @@
 # Use the indexed letters from the string to allow us to us the ".next" method to move every letter forward one.
 
-def encrypt(string)
+def encrypt(string_e)
   index = 0
-  while index < string.length
-    string[index] = string[index].next!
+  while index < string_e.length
+    string_e[index] = string_e[index].next!
     index += 1
   end
-  puts string
+  puts string_e
 end
 
-encrypt("car")
-
-
-def decrypt(string2)
-  first_letter = string2[0]
-  second_letter = string2[1]
-  third_letter = string2[2]
+def decrypt(string_d)
   alpha = "abcdefghijklmnopqrstuvwxyz"
-  new_index_1 = alpha.index(first_letter)-1
-  new_index_2 = alpha.index(second_letter)-1
-  new_index_3 = alpha.index(third_letter)-1
-  new_letter_1 = alpha[new_index_1]
-  new_letter_2 = alpha[new_index_2]
-  new_letter_3 = alpha[new_index_3]
-  print "#{new_letter_1}"+"#{new_letter_2}"+"#{new_letter_3}"
+  index = 0
+  while index < string_d.length
+    working_letter = string_d[index]
+    working_index = alpha.index(working_letter)-1
+    string_d[index] = alpha[working_index]
+  index += 1
+  end
+  puts string_d
 end
 
-  #puts encrypt("abc")
-  #puts encrypt("zed")
-  #puts decrypt("bcd")
-  #puts decrypt("afe")
 
-puts decrypt(encrypt("swordfish"))
+
+puts encrypt("abc")
+puts encrypt("zed")
+puts decrypt("bcd")
+puts decrypt("afe")
+
+# puts decrypt(encrypt("swordfish"))
