@@ -15,6 +15,8 @@ def encrypt(string_e)
   puts string_e
 end
 
+#Use an alphabet string to determine an input letters location, using index loops to work through input words. Then use that location to move the input letter back a letter.
+
 def decrypt(string_d)
   alpha = "abcdefghijklmnopqrstuvwxyz"
   index = 0
@@ -27,11 +29,11 @@ def decrypt(string_d)
   puts string_d
 end
 
-
-
+puts encrypt("swordfish")
 #puts encrypt("abc")
-puts encrypt("zed")
 #puts decrypt("bcd")
 #puts decrypt("afe")
+puts decrypt(encrypt("swordfish"))
+#The nested method call above works by first encrypt the message -in this case txpsegjti- using the first method, fulfilling its purpose of keeping state secrets safe.  Then it decrypted using our supper secret decrypting software that should be protected at all costs.
 
-# puts decrypt(encrypt("swordfish"))
+#Our Driver Code
