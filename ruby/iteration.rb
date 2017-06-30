@@ -45,27 +45,59 @@ end
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 numbers.delete_if {|x| x<5 }
+
 p numbers
+
+number_to_word = {
+  1 => "one",
+  2 => "two",
+  3 => "three",
+  4 => "four",
+  5 => "five",
+  6 => "six"
+}
+
+number_to_word.delete_if {|num, word| num >= 3}
+
+p number_to_word
 
 #Question 2
 numbers2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 p numbers2.drop_while {|y| y < 3}
 
+number_to_word2 = {
+  1 => "one",
+  2 => "two",
+  3 => "three",
+  4 => "four",
+  5 => "five",
+  6 => "six"
+}
+
+p number_to_word2.keep_if {|num, word| num>4}
+
 #Question 3
 numbers3 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 p numbers3.select{|num| num.even?}
 
+number_to_word3 = {
+  1 => "one",
+  2 => "two",
+  3 => "three",
+  4 => "four",
+  5 => "five",
+  6 => "six"
+}
 
-#alpha = ["a", "b", "c", "d"]
+p number_to_word3.select{|num, word| num.odd?}
 
-#number_to_word = {
-#  1: one,
-#  2: two,
-#  3: three,
-#  4: four,
-#  5: five,
-#  6: six
-#}
-#
+#Question 4
+
+numbers4 = [1, 2, 3, 3, 4, 6, 4, 2, 1]
+
+p numbers4.take_while {|q| q < 5 }
+
+# In the hash we could find one that stopped once condition met.
+# p numbers4.keep_if {|num, value| num < 4}
