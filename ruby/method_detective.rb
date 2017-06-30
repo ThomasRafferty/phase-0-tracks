@@ -8,13 +8,14 @@
 # => “InVeStIgAtIoN”
 
 "zom".insert(1, 'o')
+"zom".insert(2, 'o')
 # "zom".<???>
 # => “zoom”
 
 "enhance".center(15)
 # => "    enhance    "
 
-puts "Stop! You’re under arrest!".upcase
+"Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
 
 "the usual".<< " suspects"
@@ -27,16 +28,15 @@ puts "Stop! You’re under arrest!".upcase
 "The case of the disappearing last letter".chomp("r")
 # => "The case of the disappearing last lette"
 
-# "The mystery of the missing first letter".<???>
+"The mystery of the missing first letter".delete "T"
 # => "he mystery of the missing first letter"
 
 "Elementary,    my   dear        Watson!".squeeze(" ")
 # => "Elementary, my dear Watson!"
-#Note: The (" ") is not need for this example, for there are no instances of repeated letters, yet if "boom!" were to be included in the string then the second "o" would be removed
+#Note: The (" ") is not needed for this example, ".squeeze" would also have worked.  This is because there are no instances of sequentially repeated letters, yet if "boom!" were to be included in the string then the second "o" would be removed, squeezing it to "bom!".
 
 "z".getbyte(0)
 "z".ord
-"z".each_byte {|z| print z, ` ` }
 # => 122
 # (What is the significance of the number 122 in relation to the character z?)
 # The number 122 is the ASCII code for lowercase "z".  ASCII is the abbreviation from American Standard Code of Information Interchange.  ASCII is a encoding standard which allows for text can be communicated across all sorts of different devices and systems.
