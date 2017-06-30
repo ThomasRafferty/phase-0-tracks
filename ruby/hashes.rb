@@ -7,18 +7,20 @@ puts "Client's name?"
 Interior_Design_Form[:name] = gets.chomp
 
 puts "Client's age"
-Interior_Design_Form[:age] = gets.chomp
+Interior_Design_Form[:age] = gets.chomp.to_i
 
 puts "Client's address?"
 Interior_Design_Form[:address] = gets.chomp
 
 puts "Number of children?"
-Interior_Design_Form[:number_children] = gets.chomp
+Interior_Design_Form[:number_children] = gets.chomp.to_i
 
-puts "Does the client prefer warm tones? (true/false)"
-Interior_Design_Form[:warm_tones] = gets.chomp
+puts "Does the client prefer warm tones? (y/n)"
+tone_preferance = gets.chomp
+Interior_Design_Form[:warm_tones] = tone_preference == "y"
 
-puts "Does the client prefer a modern chic? (true/false)"
-Interior_Design_Form[:modern_chic] = gets.chomp
+puts "Does the client prefer a modern chic? (y/n)"
+chic_preference = gets.chomp
+Interior_Design_Form[:modern_chic] = chic_preference == "y"
 
 p Interior_Design_Form
