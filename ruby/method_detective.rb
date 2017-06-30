@@ -31,6 +31,7 @@
 "The mystery of the missing first letter".delete "T"
 # => "he mystery of the missing first letter"
 
+
 "Elementary,    my   dear        Watson!".squeeze(" ")
 # => "Elementary, my dear Watson!"
 #Note: The (" ") is not needed for this example, ".squeeze" would also have worked.  This is because there are no instances of sequentially repeated letters, yet if "boom!" were to be included in the string then the second "o" would be removed, squeezing it to "bom!".
