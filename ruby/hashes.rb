@@ -3,7 +3,22 @@
 Interior_Design_Form = {}
 
 #Driver Code
-puts "Client's Name?"
+puts "Client's name?"
 Interior_Design_Form[:name] = gets.chomp
+
+puts "Client's age"
+Interior_Design_Form[:age] = gets.chomp
+
+puts "Client's address?"
+Interior_Design_Form[:address] = gets.chomp
+
+puts "Number of children?"
+Interior_Design_Form[:number_children] = gets.chomp
+
+puts "Does the client prefer warm tones? (true/false)"
+Interior_Design_Form[:warm_tones] = gets.chomp
+
+puts "Does the client prefer a modern chic? (true/false)"
+Interior_Design_Form[:modern_chic] = gets.chomp
 
 p Interior_Design_Form
