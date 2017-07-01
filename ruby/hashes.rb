@@ -51,23 +51,24 @@ until correction_entered
     Interior_Design_Form[:address] = gets.chomp
     correction_entered = true
   elsif
-    correction == ("number_children" || "number children")
+    correction == ("number_children")
     puts "Please enter correct number of children."
     Interior_Design_Form[:number_children] = gets.chomp.to_i
     correction_entered = true
   elsif
-    correction == ("warm_tones" || "warm tones")
+    correction == ("warm_tones")
     puts "Please enter does client like warm tones? (y/n)"
     tone_preference = gets.chomp
     Interior_Design_Form[:warm_tones] = tone_preference == "y"
     correction_entered = true
   elsif
-    correction == ("modern_chic" || "modern chic")
+    correction == ("modern_chic")
     puts "Please enter does client like modern chic? (y/n)"
+    chic_preference = gets.chomp
     Interior_Design_Form[:modern_chic] = chic_preference == "y"
     correction_entered = true
   else
-    puts "I did not understand you?"
+    puts "I did not understand you which key you would like to correct?  If finished enter done."
     correction = gets.chomp
   end
 end
