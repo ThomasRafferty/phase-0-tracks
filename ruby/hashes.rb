@@ -16,11 +16,12 @@ puts "Number of children?"
 Interior_Design_Form[:number_children] = gets.chomp.to_i
 
 puts "Does the client prefer warm tones? (y/n)"
-tone_preferance = gets.chomp
+tone_preference = gets.chomp
 Interior_Design_Form[:warm_tones] = tone_preference == "y"
 
 puts "Does the client prefer a modern chic? (y/n)"
 chic_preference = gets.chomp
 Interior_Design_Form[:modern_chic] = chic_preference == "y"
 
-p Interior_Design_Form
+require 'pp'
+pp Interior_Design_Form
