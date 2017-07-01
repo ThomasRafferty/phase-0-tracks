@@ -30,27 +30,46 @@ pp Interior_Design_Form
 puts "Is the client's information correct?  If correct enter done, if not enter the key which needs to be corrected."
 
 correction = gets.chomp
-if
-  correction == "done"
-elsif
-  correction == "name"
-  Interior_Design_Form[:name] = gets.chomp
-elsif correction == "age"
-  Interior_Design_Form[:age] = gets.chomp.to_i
-elsif correction == "address"
-  Interior_Design_Form[:address] = gets.chomp
-elsif correction == "number_children" || "number children"
-  Interior_Design_Form[:number_children] = gets.chomp.to_i
-elsif correction == "warm_tones" || "warm tones"
-  puts "Warm tones (y/n)?"
-  tone_preference = gets.chomp
-  Interior_Design_Form[:warm_tones] = tone_preference == "y"
-elsif correction == "modern_chic" || "modern chic"
-  puts "Modern chic? (y/n)?"
-  Interior_Design_Form[:modern_chic] = chic_preference == "y"
-else
-  puts "I did not understand you?"
-  correction = gets.chomp
+correction_entered =false
+until correction_entered
+  if
+    correction == "done"
+    correction_entered = true
+  elsif
+    correction == "name"
+    puts "Please enter correct name."
+    Interior_Design_Form[:name] = gets.chomp
+    correction_entered = true
+  elsif
+    correction == "age"
+    puts "Please enter correct age."
+    Interior_Design_Form[:age] = gets.chomp.to_i
+    correction_entered = true
+  elsif
+    correction == "address"
+    puts "Please enter correct address."
+    Interior_Design_Form[:address] = gets.chomp
+    correction_entered = true
+  elsif
+    correction == ("number_children" || "number children")
+    puts "Please enter correct number of children."
+    Interior_Design_Form[:number_children] = gets.chomp.to_i
+    correction_entered = true
+  elsif
+    correction == ("warm_tones" || "warm tones")
+    puts "Please enter does client like warm tones? (y/n)"
+    tone_preference = gets.chomp
+    Interior_Design_Form[:warm_tones] = tone_preference == "y"
+    correction_entered = true
+  elsif
+    correction == ("modern_chic" || "modern chic")
+    puts "Please enter does client like modern chic? (y/n)"
+    Interior_Design_Form[:modern_chic] = chic_preference == "y"
+    correction_entered = true
+  else
+    puts "I did not understand you?"
+    correction = gets.chomp
+  end
 end
 
 require 'pp'
