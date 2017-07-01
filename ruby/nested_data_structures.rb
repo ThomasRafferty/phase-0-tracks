@@ -3,27 +3,38 @@
 
 highway = {
   eastbound: {
-    lanes: {
-      fast_lane = [
+      fast_lane: [
         [cars_east_fast = [
           ['Mercedes-Benz', 'speed: 85 mph' 'Driver: Steve', 'Passengers: 4'],
           ['Honda', 'speed: 67 mph', 'Driver: Mark', 'Passengers: 0'],
           ['Mazda', 'speed: 65 mph', 'Driver: Mark', 'Passengers: 0']
         ]
       ],
-#      middle_lane: {
-#
-#
-#      },
-#      slow_lane: {
-#
-#      }
-#
-#    }
-#  }
-#
-#  westbound = {
-#
-#  }
-#
-#}#
+      middle_lane: [
+        [cars_east_middle = [
+        ]
+      ],
+      slow_lane: [
+        [cars_east_low = [
+        ]
+      ]
+    ]
+  },
+  westbound: {
+      fast_lane: [
+        [cars_west_fast = [
+          ['Mercedes-Benz', 'speed: 85 mph' 'Driver: Steve', 'Passengers: 4'],
+          ['Honda', 'speed: 67 mph', 'Driver: Mark', 'Passengers: 0'],
+          ['Mazda', 'speed: 65 mph', 'Driver: Mark', 'Passengers: 0']
+        ]
+      ],
+      middle_lane: [
+        [cars_west_medium = [
+        ]
+      ],
+      slow_lane: [
+        [cars_west_slow = [
+        ]
+      ]
+  }
+}
