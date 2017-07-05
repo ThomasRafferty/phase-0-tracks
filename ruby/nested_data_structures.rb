@@ -9,10 +9,12 @@ highway = {
         ['Driver: Jamal', 'Mazda', 'Speed: 65 mph', 'Passengers: 0']
     ],
     cars_middle_lane = [
-      ['Ford', 'Speed:64 mph', 'Driver: Jane', 'Passengers: 2'],
-      ['Honda', 'Speed: 60 mph', 'Driver: ']
+      ['Driver: Jane', 'Ford', 'Speed:64 mph', 'Passengers: 2'],
+      ['Driver: John' 'Honda', 'Speed: 60 mph', 'Passengers: 1'],
+      ['Driver: Brandon' 'Ford', 'Speed: 60 mph', 'Passengers: 1'],
     ],
     cars_slow_lane = [
+      ['Driver: Grandma' 'Chevy', 'Speed: 25 mph', 'Passengers: 0'],
     ]
   },
   westbound: {
