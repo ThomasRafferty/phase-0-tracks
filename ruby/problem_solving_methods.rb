@@ -29,10 +29,21 @@ search_array(arr, 100)
 #Construct an array that continues to increase the size of the array by adding new elements. This new element should be calculated by using the last two elements of the array.
 
 def fib(input_fibonacci)
+    fib_array = []
+  if input_fibonacci == 1
+    fib_array.push(0)
+  elsif input_fibonacci == 2
+    fib_array.push(0)
+    fib_array.push(1)
+  elsif input_fibonacci == 3
+    fib_array.push(0)
+    fib_array.push(1)
+    fib_array.push(1)
+  else
     fib_array = [0, 1, 1]
-  until fib_array.length == input_fibonacci
-    #newfib =
-    fib_array.insert(-1, (fib_array[-1]+fib_array[-2]))
+    until fib_array.length == input_fibonacci
+      fib_array.insert(-1, (fib_array[-1]+fib_array[-2]))
+    end
   end
   p fib_array
 end
@@ -44,4 +55,4 @@ desired_index_fibonacci = gets.chomp.to_i
 fib(desired_index_fibonacci)
 
 puts "Is the 100 Fibonacci number equal to 218922995834555169026?"
-fib(100).last == 218922995834555169026
+p fib(100).last == 218922995834555169026
