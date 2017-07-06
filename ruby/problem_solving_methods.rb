@@ -11,6 +11,9 @@ def search_array(input_array, input_search_integer)
     end
   index += 1
   end
+  if index > input_array.length+1
+    puts "nil"
+  end
 end
 
-search_array(arr, 23)
+search_array(arr, 50)
