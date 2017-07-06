@@ -8,12 +8,19 @@ def search_array(input_array, input_search_integer)
   input_array.each do |x|
     if input_search_integer == x
       p index
+      break
     end
   index += 1
   end
-  if index > input_array.length+1
+  if index > input_array.length
     puts "nil"
   end
 end
 
-search_array(arr, 50)
+search_array(arr, 42)
+search_array(arr, 89)
+search_array(arr, 0)
+search_array(arr, -1)
+search_array(arr, 23)
+search_array(arr, 1)
+search_array(arr, 100)
