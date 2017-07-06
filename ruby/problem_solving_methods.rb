@@ -4,12 +4,12 @@
 arr = [42, 89, 23, 1]
 
 def search_array(input_array, input_search_integer)
+  index = 1
   input_array.each do |x|
     if input_search_integer == x
-      p (input_array.length) - input_array[0]
-    # else input_search_integer != x
-    #   print "nil"
+      p index
     end
+  index += 1
   end
 end
 
