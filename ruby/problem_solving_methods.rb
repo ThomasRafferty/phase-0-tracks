@@ -49,10 +49,10 @@ def fib(input_fibonacci)
 end
 
 #Driver Code
-puts "What number in Fibonacci would you like to know?"
+puts "How many numbers of the Fibonacci sequence would you like to see?"
 desired_index_fibonacci = gets.chomp.to_i
 
 fib(desired_index_fibonacci)
 
-puts "Is the 100 Fibonacci number equal to 218922995834555169026?"
-p fib(100).last == 218922995834555169026
+# puts "Is the 100 Fibonacci number equal to  218922995834555169026?"
+# p fib(100).last == 218922995834555169026
