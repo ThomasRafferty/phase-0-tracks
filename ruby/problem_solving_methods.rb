@@ -24,3 +24,16 @@ search_array(arr, -1)
 search_array(arr, 23)
 search_array(arr, 1)
 search_array(arr, 100)
+
+#Release 1
+#Construct an array that continues to increase the size of the array by adding new elements. This new element should be calculated by using the last two elements of the array.
+
+def fib(desired_index_fibonacci)
+    fib_array = [0, 1, 1]
+  until fib_array.length == desired_index_fibonacci
+    fib_array.insert(-1, "cat")
+  end
+  p fib_array
+end
+
+fib(8)
