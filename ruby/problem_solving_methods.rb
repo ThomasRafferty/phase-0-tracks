@@ -31,9 +31,11 @@ search_array(arr, 100)
 def fib(desired_index_fibonacci)
     fib_array = [0, 1, 1]
   until fib_array.length == desired_index_fibonacci
-    fib_array.insert(-1, "cat")
+    fib_array.insert(-1, (fib_array[-1]+fib_array[-2]))
   end
   p fib_array
 end
 
-fib(8)
+
+puts "Is the 100 Fibonacci number equal to 218922995834555169026?"
+fib(100).last == 21892299583455516902
