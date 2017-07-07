@@ -31,5 +31,13 @@ highway = {
    ]
   }
 }
+
+
+
 require 'pp'
-pp highway
+pp highway[:westbound_lanes]
+pp highway[:eastbound_lanes][:fast_lane]
+pp highway[:eastbound_lanes][:slow_lane][0]
+pp highway[:westbound_lanes][:slow_lane][0,2]
+pp highway[:eastbound_lanes][:middle_lane][1][0]
+pp highway[:westbound_lanes][:fast_lane][0][0,3]
