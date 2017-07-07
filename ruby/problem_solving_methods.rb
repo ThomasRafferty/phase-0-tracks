@@ -1,5 +1,6 @@
 #Release 0
 # We are taking a declared array and we are going construct a method that takes as an input an array and a possible integer in that array and returns its index number.
+
 puts "Release 0"
 arr = [42, 89, 23, 1, 7]
 
@@ -28,6 +29,7 @@ search_array(arr, 100)
 #Release 1
 #Construct an array that continues to increase the size of the array by adding new elements. This new element should be calculated by using the last two elements of the array.
 
+
 puts ""
 puts "Release 1"
 def fib(input_fibonacci)
@@ -45,7 +47,6 @@ def fib(input_fibonacci)
   end
   p fib_array
 end
-
 
 #Driver Code
 puts "How many numbers of the Fibonacci sequence would you like to see?"
