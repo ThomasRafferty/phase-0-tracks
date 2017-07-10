@@ -8,9 +8,9 @@
 #Need to figure out how to get this array output
 def array_preperation(input_name)
       input_name.downcase!
-      name_array = input_name.split(' ')
-      name_array.insert(0, name_array.delete_at(1))
-      name_array = input_name.split('')
+      name_split = input_name.split(' ')
+      name_flip = name_split.insert(0, name_split.delete_at(1)).join(' ')
+      name_array = name_flip.split('')
 end
 
 
