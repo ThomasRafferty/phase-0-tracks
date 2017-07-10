@@ -101,8 +101,6 @@ end
 
 index = 0
 until index == agent_list.length
-  puts "#{database[0][index]} is actually #{database[1][index]}."
+  puts "#{database[1][index]} is actually #{database[0][index]}."
   index +=1
 end
-
-p agent_list
