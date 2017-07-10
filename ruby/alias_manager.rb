@@ -5,31 +5,35 @@ agents_processed = gets.chomp.to_i
 entry_counter = 0
 until agents_processed == entry_counter
 
-    def alias_manager(real_name)
+     def alias_manager(real_name)
+
       real_name.downcase!
       name_array = real_name.split('')
-    end
-    #   def next_vowel(name_array)
-    #     vowel = ['a', 'e', 'i', 'o', 'u']
-    #     vowel_input.map! do |old_vowel|
-    #       if old_vowel == vowel[0]
-    #           old_vowel = vowel[1]
-    #       elsif old_vowel == vowel[1]
-    #           old_vowel = vowel[2]
-    #       elsif old_vowel == vowel[2]
-    #           old_vowel = vowel[3]
-    #       elsif old_vowel == vowel[3]
-    #           old_vowel = vowel[4]
-    #       elsif old_vowel == vowel[4]
-    #           old_vowel = vowel[0]
-    #       else
-    #         old_vowel = old_vowel
-    #       end
-    #     end
-    # p next_vowel(name_array)
-    #   end
-    #puts name_array
-    end
+
+      #changing the vowels in the array to the next vowel
+      vowel = ['a', 'e', 'i', 'o', 'u']
+      name_array.map! do |input_character|
+       if input_character == vowel[0]
+           input_character = vowel[1]
+       elsif input_character == vowel[1]
+           input_character = vowel[2]
+       elsif input_character == vowel[2]
+           input_character = vowel[3]
+       elsif input_character == vowel[3]
+           input_character = vowel[4]
+       elsif input_character == vowel[4]
+           input_character = vowel[0]
+       else
+         input_character = input_character
+       end
+     end
+
+
+   end
+
+input_name = "Thomas Raff"
+alias_manager(input_name)
+
   entry_counter += 1
 end
 input_name = "Thomas"
