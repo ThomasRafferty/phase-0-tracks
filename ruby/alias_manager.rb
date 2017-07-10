@@ -3,8 +3,8 @@
 
 #This method should take the name provided by user, downcase it, flip the names and then turn all the characters into a array
 def array_preperation(input_name)
-      input_name.downcase!
-      name_split = input_name.split(' ')
+      downcase_name = input_name.downcase
+      name_split = downcase_name.split(' ')
       name_flip = name_split.insert(0, name_split.delete_at(1)).join(' ')
       name_array = name_flip.split('')
 end
@@ -84,7 +84,7 @@ end
 #Puts array back into a string and capitalizes the first letter of each name.
 def alias_generator(input_array)
   alias_string = input_array.join
-   alias_string.split.map{|x| x.capitalize}.join(' ')
+  alias_string.split.map{|x| x.capitalize}.join(' ')
 end
 
 
@@ -96,8 +96,13 @@ loop do
   agent_name = gets.chomp
   break if agent_name == "quit"
   agent_list << agent_name
-  alias_list << downer(agent_name)
+  alias_list << alias_generator(consonant_changer(vowel_changer(array_preperation(agent_name))))
 end
 
-database.each do |agent, alias|
+index = 0
+until index == agent_list.length
+  puts "#{database[0][index]} is actually #{database[1][index]}."
+  index +=1
+end
 
+p agent_list
