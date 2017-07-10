@@ -84,8 +84,15 @@ def consonant_changer(consonants_input)
     end
 end
 
+def alias_generator(input_array)
+  alias_string = input_array.join
+   alias_string.split.map{|x| x.capitalize}.join(' ')
+end
+
+
+
 agent_name = "Thomas Rafferty"
-p consonant_changer(vowel_changer(array_preperation(agent_name)))
+p alias_generatoy(consonant_changer(vowel_changer(array_preperation(agent_name))))
 
 
 #alias_manager(input_name)
