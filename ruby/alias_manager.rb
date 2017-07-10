@@ -8,6 +8,8 @@
 #Need to figure out how to get this array output
 def array_preperation(input_name)
       input_name.downcase!
+      name_array = input_name.split(' ')
+      name_array.insert(0, name_array.delete_at(1))
       name_array = input_name.split('')
 end
 
@@ -91,8 +93,8 @@ end
 
 
 
-agent_name = "Thomas Rafferty"
-p alias_generatoy(consonant_changer(vowel_changer(array_preperation(agent_name))))
+agent_name = "Felicia Torres"
+p alias_generator(consonant_changer(vowel_changer(array_preperation(agent_name))))
 
 
 #alias_manager(input_name)
