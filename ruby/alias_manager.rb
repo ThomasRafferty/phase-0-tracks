@@ -5,78 +5,50 @@ agents_processed = gets.chomp.to_i
 entry_counter = 0
 until agents_processed == entry_counter
 
-     def alias_manager(real_name)
-
-      real_name.downcase!
+     #Need to figure out how to get this array output
+def array_preperation(input_name)
+      input_name.downcase!
       name_array = real_name.split('')
-
-      #changing the vowels in the array to the next vowel
-      vowel = ['a', 'e', 'i', 'o', 'u']
-      name_array.map! do |input_character|
-       if input_character == vowel[0]
-           input_character = vowel[1]
-       elsif input_character == vowel[1]
-           input_character = vowel[2]
-       elsif input_character == vowel[2]
-           input_character = vowel[3]
-       elsif input_character == vowel[3]
-           input_character = vowel[4]
-       elsif input_character == vowel[4]
-           input_character = vowel[0]
-       else
-         input_character = input_character
-       end
-     end
-
-
-   end
-
-input_name = "Thomas Raff"
-alias_manager(input_name)
-
-  entry_counter += 1
 end
-input_name = "Thomas"
+
+
+#Changing the vowels in the array to the next vowel
+def vowel_changer(vowel_input)
+  vowel = ['a', 'e', 'i', 'o', 'u']
+  vowel_input.map! do |input_character_v|
+    if input_character_v == vowel[0]
+        input_character_v = vowel[1]
+    elsif input_character_v == vowel[1]
+        input_character_v = vowel[2]
+    elsif input_character_v == vowel[2]
+        input_character_v = vowel[3]
+    elsif input_character_v == vowel[3]
+        input_character_v = vowel[4]
+    elsif input_character_v == vowel[4]
+        input_character_v = vowel[0]
+    else
+        input_character_v
+    end
+  end
+end
+
+#Changing consonants in array to next consonants
+def consonant_changer(consonants_transformation)
+  consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
+   consonants_transformation.map! do |input_consonant|
+
+
+end
+
+
+
+      #Changing consonants in array to next consonants
+      consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
+      name_array.map! do |input_consonant|
+        if input_consonant == c
+   end
+        # elsif input_character == character
+        #    input_character = character[+1]
+input_name = "Thomas Rafferty"
 alias_manager(input_name)
-
-##   #Driver
-## puts "Please enter agent's real name to create an alias."
-## input_name = gets.chomp
-##
-## alias_manager(input_name)
-
-
 #  name_array.map! { |name_array| name_array.next}
-
-
-### Old Attempt
-# def alias_manager(real_name)
-#   real_name.downcase!
-#   name_array = real_name.split('')
-#
-#   def next_vowel(name_array)
-#     vowel = ['a', 'e', 'i', 'o', 'u']
-#     real_name.each do |x| #Need do?
-#
-#       vowel = ['a', 'e', 'i', 'o', 'u']
-#         if x == vowel[0]
-#           x = vowel[1]
-#         elsif x == vowel[1]
-#           x = vowel[2]
-#         elsif x == vowel[2]
-#           x = vowel[3]
-#         elsif x == vowel[3]
-#           x = vowel[4]
-#         else x == vowel[4]
-#           x = vowel[0]
-#         end
-#       end
-#   end
-# end
-#       puts real_name
-#       #vowel_loop = 0
-# #Driver
-# puts "Please enter agent's real name to create an alias."
-# input_name = gets.chomp
-#
-# alias_manager(input_name)
