@@ -15,6 +15,9 @@
 # # zombie_apocalypse_supplies using #each.
 # # For instance: are boots in your list of supplies?
 # # ----
+
+## Could not figure out how to only have one outcome print :(
+
 # def item_deterctor(item_list_checked, possible_item)
 #   item_list_checked.each do |item_looking_for|
 #     if item_looking_for == possible_item
@@ -79,7 +82,7 @@ end
 # 2. Keep only animals in extinct_animals if they were extinct before
 # the year 2000, using #each.
 # ----
-extinct_animals.each do # |animal, extinction_date|
+extinct_animals.each do
   extinct_animals.delete_if { |animal, extinction_date| extinction_date < 2000}
 end
 
@@ -91,6 +94,22 @@ p extinct_animals
 # using #each, so they accurately reflect what year the animal went extinct.
 # ----
 
+#Could not undo deleted animals
+extinct_animals = {
+  "Passenger Pigeon" => 1914,
+  "Tasmanian Tiger" => 1936,
+  "Eastern Hare Wallaby" => 1890,
+  "Dodo" => 1662,
+  "Pyrenean Ibex" => 2000,
+  "West African Black Rhinoceros" => 2011,
+  "Laysan Crake" => 1923
+}
+
+extinct_animals.each { |animals, extinction_date| extinct_animals[animals] = extinction_date+3}
+
+p extinct_animals
+
+
 # 4. You've heard that the following animals might be extinct, but you're not sure.
 # Build a method  using #each that checks if an animal is in the hash and returns true/false.
 # Call the method in your driver code with each of the following animals to check if
@@ -100,6 +119,41 @@ p extinct_animals
 # "Saiga Antelope"
 # Driver code example: is_extinct?(extinct_animals, "Andean Cat")
 # ----
+
+# Could not figure out how to only have one outcome print :(
+
+    def animal_deterctor(input_extinction_list, possibly_extinct_animal)
+        input_extinction_list.each do |animal_look_up, extinction_date|
+        p possibly_extinct_animal
+        if animal_look_up == possibly_extinct_animal
+          p true
+        else animal_look_up != possibly_extinct_animal
+          p false
+        end
+
+      end
+    end
+
+p animal_deterctor(extinct_animals, "Andean Cat")
+p animal_deterctor(extinct_animals, "Dodo")
+p animal_deterctor(extinct_animals, "Saiga Antelope")
+# puts "What animal extinction status would you like to look up? If finished enter done."
+# search_animal = gets.chomp
+# animal_deterctor(extinct_animals, search_animal)
+
+# break if possibly_extinct_animal == done
+
+# def item_deterctor(item_list_checked, possible_item)
+
+#   item_list_checked.each do |item_looking_for|
+#     if item_looking_for == possible_item
+#       puts "Item looking for was this item!"
+#     else
+#       puts "Item looking for was not this item."
+#     end
+#   end
+# end
+
 
 # 5. We just found out that the Passenger Pigeon is actually not extinct!
 # Remove them from extinct_animals and return the key value pair as a two item array.
