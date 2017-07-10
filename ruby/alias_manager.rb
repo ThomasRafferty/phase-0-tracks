@@ -1,14 +1,14 @@
 #In order to address this problem, as the lease says we should break it into parts. First, downcase everything to limit the amount of possible charters which we have to possible match later.  From their use a matching loop to distinguish between vowels and consonants.
 
-puts "How many agents would you like to create an alias for?"
-agents_processed = gets.chomp.to_i
-entry_counter = 0
-until agents_processed == entry_counter
+# puts "How many agents would you like to create an alias for?"
+# agents_processed = gets.chomp.to_i
+# entry_counter = 0
+# until agents_processed == entry_counter
 
 #Need to figure out how to get this array output
 def array_preperation(input_name)
       input_name.downcase!
-      name_array = real_name.split('')
+      name_array = input_name.split('')
 end
 
 
@@ -84,7 +84,9 @@ def consonant_changer(consonants_input)
     end
 end
 
+agent_name = "Thomas Rafferty"
+p consonant_changer(vowel_changer(array_preperation(agent_name)))
 
-input_name = "Thomas Rafferty"
-alias_manager(input_name)
+
+#alias_manager(input_name)
 #  name_array.map! { |name_array| name_array.next}
