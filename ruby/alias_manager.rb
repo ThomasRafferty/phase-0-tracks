@@ -4,7 +4,7 @@ def alias_manager(real_name)
   real_name.downcase!
   name_array = real_name.split('')
 
-  def next_vowel(real_name)
+  def next_vowel(name_array)
     vowel = ['a', 'e', 'i', 'o', 'u']
     real_name.each do |x| #Need do?
 
