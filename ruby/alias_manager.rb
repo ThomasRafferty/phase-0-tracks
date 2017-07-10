@@ -88,14 +88,16 @@ def alias_generator(input_array)
 end
 
 
+agent_list = []
+alias_list = []
+database = [agent_list, alias_list]
 loop do
   puts "Enter agent name to generate alias. (When complete, enter quit)"
   agent_name = gets.chomp
   break if agent_name == "quit"
-  p alias_generator(consonant_changer(vowel_changer(array_preperation(agent_name))))
+  agent_list << agent_name
+  alias_list << downer(agent_name)
 end
 
+database.each do |agent, alias|
 
-#alias_manager(input_name)
-
-#  name_array.map! { |name_array| name_array.next}
