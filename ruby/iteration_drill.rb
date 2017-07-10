@@ -15,16 +15,25 @@ end
 # zombie_apocalypse_supplies using #each.
 # For instance: are boots in your list of supplies?
 # ----
-def string_deterctor(possible_string)
-  possible_string.each do
-  p possible_string.class == true?
-  end
-end
+### def item_deterctor(possible_item)
+###   possible_item.each do |supply_item|
+###   supply_item = zombie_apocalypse_supplies
+###   end
+### end
+###
+### puts "What item would you like to check to see if in zombie apocalypse supplies?"
+### item_check = gets.chomp
+### item_deterctor(item_check)
 
 # 3. You can't carry too many things, you've only got room in your pack for 5.
 # Remove items in your zombie_apocalypse_supplies in any way you'd like,
 # leaving only 5, using #each.
 # ----
+until zombie_apocalypse_supplies.length == 5
+  zombie_apocalypse_supplies.pop
+end
+
+p zombie_apocalypse_supplies
 
 # 4. You found another survivor! This means you can combine your supplies.
 # Create a new combined supplies list out of your zombie_apocalypse_supplies
