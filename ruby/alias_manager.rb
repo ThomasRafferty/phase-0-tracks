@@ -1,18 +1,13 @@
-#In order to address this problem, as the lease says we should break it into parts. First, downcase everything to limit the amount of possible charters which we have to possible match later.  From their use a matching loop to distinguish between vowels and consonants.
+#In order to address this problem, as the lease says we should break it into parts. First, downcase everything to limit the amount of possible charters which we have to possible match later, and create an array from the input name. Also this might be a good time to flip the names. From their use a conditional loop if the characters from the name match a constructed array, doing so for each vowels and consonants.  Then put the array back together and capitalize the first letter of each name.
 
-# puts "How many agents would you like to create an alias for?"
-# agents_processed = gets.chomp.to_i
-# entry_counter = 0
-# until agents_processed == entry_counter
 
-#Need to figure out how to get this array output
+#This method should take the name provided by user, downcase it, flip the names and then turn all the characters into a array
 def array_preperation(input_name)
       input_name.downcase!
       name_split = input_name.split(' ')
       name_flip = name_split.insert(0, name_split.delete_at(1)).join(' ')
       name_array = name_flip.split('')
 end
-
 
 #Changing the vowels in the array to the next vowel
 def vowel_changer(vowel_input)
@@ -86,16 +81,21 @@ def consonant_changer(consonants_input)
     end
 end
 
+#Puts array back into a string and capitalizes the first letter of each name.
 def alias_generator(input_array)
   alias_string = input_array.join
    alias_string.split.map{|x| x.capitalize}.join(' ')
 end
 
 
-
-agent_name = "Felicia Torres"
-p alias_generator(consonant_changer(vowel_changer(array_preperation(agent_name))))
+loop do
+  puts "Enter agent name to generate alias. (When complete, enter quit)"
+  agent_name = gets.chomp
+  break if agent_name == "quit"
+  p alias_generator(consonant_changer(vowel_changer(array_preperation(agent_name))))
+end
 
 
 #alias_manager(input_name)
+
 #  name_array.map! { |name_array| name_array.next}
