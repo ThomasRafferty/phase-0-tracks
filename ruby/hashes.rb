@@ -27,13 +27,13 @@ require 'pp'
 pp Interior_Design_Form
 
 #User Verification of entered data
-puts "Is the client's information correct?  If correct enter done, if not enter the key which needs to be corrected."
+puts "Is the client's information correct?  If correct enter none, if not enter the key which needs to be corrected."
 
 correction = gets.chomp
 correction_entered =false
 until correction_entered
   if
-    correction == "done"
+    correction == "none"
     correction_entered = true
   elsif
     correction == "name"
