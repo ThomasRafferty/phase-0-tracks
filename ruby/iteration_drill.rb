@@ -15,15 +15,19 @@ end
 # zombie_apocalypse_supplies using #each.
 # For instance: are boots in your list of supplies?
 # ----
-### def item_deterctor(possible_item)
-###   possible_item.each do |supply_item|
-###   supply_item = zombie_apocalypse_supplies
-###   end
-### end
-###
-### puts "What item would you like to check to see if in zombie apocalypse supplies?"
-### item_check = gets.chomp
-### item_deterctor(item_check)
+def item_deterctor(item_list_checked, possible_item)
+  item_list_checked.each do |item_looking_for|
+    if item_looking_for == possible_item
+      puts "Item looking for was this item!"
+    else
+      puts "Item looking for was not this item."
+    end
+  end
+end
+
+puts "What item would you like to check to see if in zombie apocalypse supplies?"
+item_check = gets.chomp
+item_deterctor(zombie_apocalypse_supplies, item_check)
 
 # 3. You can't carry too many things, you've only got room in your pack for 5.
 # Remove items in your zombie_apocalypse_supplies in any way you'd like,
@@ -42,6 +46,14 @@ p zombie_apocalypse_supplies
 # documentation for Arrays.
 other_survivor_supplies = [ "warm clothes", "rations", "compass", "camp stove",
                             "solar battery", "flashlight"]
+other_survivor_supplies_index = 0
+until other_survivor_supplies_index == other_survivor_supplies.length
+  zombie_apocalypse_supplies.push(other_survivor_supplies[other_survivor_supplies_index])
+  other_survivor_supplies_index += 1
+end
+
+zombie_apocalypse_supplies.uniq!
+p zombie_apocalypse_supplies
 # ----
 
 # Hash Drills
