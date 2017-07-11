@@ -22,11 +22,12 @@ end
   # Create method in taking the input arguments.  Within method add parameters key with optional quality as value.
   # Assign new item to a key with a value of 1, IF no optional quantity
 # output: HASH with newly added item
+
 def list_adder(list_adder_input, item_name, optional_quanity = 1)
   list_adder_input[item_name] = optional_quanity
   p list_adder_input
 end
-p list
+
 
 
 # Method to remove an item from the list
@@ -45,7 +46,7 @@ p list
 # output:
 
 # DRIVER CODE ************************************************************************************************************************
-create_list("carrots apples cereal pizza")
-list_adder(list, "Bagels")
+list_adder(create_list("carrots apples cereal pizza"), "Bagels")
+
 
 #list_adder(list, item_name, optional_quanity = 1)
