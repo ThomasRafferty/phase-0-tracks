@@ -7,3 +7,8 @@ class Puppy
 
 end
 
+
+#Driver Code ##########################################
+maggie = Puppy.new
+
+maggie.fetch("ball")
