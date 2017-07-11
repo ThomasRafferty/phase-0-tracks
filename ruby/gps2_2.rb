@@ -23,18 +23,20 @@ end
   # Assign new item to a key with a value of 1, IF no optional quantity
 # output: HASH with newly added item
 
-def list_adder(list_adder_input, item_name, optional_quanity = 1)
-  list_adder_input[item_name] = optional_quanity
-  p list_adder_input
+def list_adder(list_input_adder, item_name_add, optional_quanity = 1)
+  list_input_adder[item_name_add] = optional_quanity
+  p list_input_adder
 end
 
-
-
 # Method to remove an item from the list
-# input:
+# input: list, item name, optional quality
 # steps:
-# output:
-
+  # Create a method that takes the list parameter above and removes the key-value parameter specified.
+# output: Hash without removed item
+def list_remover(list_input_remover, item_name_remove)
+  list_input_remover.delete(item_name_remove)
+  p list_input_remover
+end
 # Method to update the quantity of an item
 # input:
 # steps:
@@ -46,7 +48,5 @@ end
 # output:
 
 # DRIVER CODE ************************************************************************************************************************
-list_adder(create_list("carrots apples cereal pizza"), "Bagels")
+list_remover(list_adder(create_list("carrots apples cereal pizza"), "Bagels"), "cereal")
 
-
-#list_adder(list, item_name, optional_quanity = 1)
