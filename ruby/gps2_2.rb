@@ -37,6 +37,7 @@ def list_remover(list_input_remover, item_name_remove)
   list_input_remover.delete(item_name_remove)
   p list_input_remover
 end
+
 # Method to update the quantity of an item
 # input:
 # steps:
