@@ -24,6 +24,11 @@ class Puppy
   def sit
     puts "*sit*"
   end
+
+  def initialize
+    puts "Initializing new puppy instance"
+  end
+
 end
 
 
