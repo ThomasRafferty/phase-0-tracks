@@ -15,27 +15,23 @@ def create_list(list_input)
   p list
 end
 
-
 # Method to add an item to a list
 # input: list, item name, and optional quantity
 # steps:
   # Create method in taking the input arguments.  Within method add parameters key with optional quality as value.
   # Assign new item to a key with a value of 1, IF no optional quantity
 # output: HASH with newly added item
-
 def list_adder(list_input_adder, item_name_add, optional_quanity = 1)
   list_input_adder[item_name_add] = optional_quanity
-  p list_input_adder
 end
 
 # Method to remove an item from the list
-# input: list, item name, optional quality
+# input: list, item name
 # steps:
   # Create a method that takes the list parameter above and removes the key-value parameter specified.
 # output: Hash without removed item
 def list_remover(list_input_remover, item_name_remove)
   list_input_remover.delete(item_name_remove)
-  p list_input_remover
 end
 
 # Method to update the quantity of an item
@@ -51,7 +47,6 @@ def update_quantity(list, item, new_quantity)
      list[key] = new_quantity
     end
   end
-   p list
 end
 
 # Method to print a list and make it look pretty
@@ -75,5 +70,6 @@ list_adder(groceries_2, "Lemonade", 2)
 list_adder(groceries_2, "Tomatoes", 3)
 list_adder(groceries_2, "Onions", 1)
 list_adder(groceries_2, "Ice Cream", 4)
+update_quantity(groceries_2, "Ice Cream", 1)
 list_remover(groceries_2, "Lemonade")
 pretty_up(groceries_2)
