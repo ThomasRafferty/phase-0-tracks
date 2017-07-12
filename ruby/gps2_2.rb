@@ -37,16 +37,35 @@ def list_remover(list_input_remover, item_name_remove)
   list_input_remover.delete(item_name_remove)
   p list_input_remover
 end
+
 # Method to update the quantity of an item
-# input:
+# input: list (hash), existing item, new quantity
 # steps:
-# output:
+  # define a method that will evaluate the list, the item, and the newly entered quantity
+  # take each item in the list and check it against the new input item
+  # if the items match, update the quantity of the existing item to new quantity
+# output: New hash with an updated quantity of the item
+def update_quantity(list, item, new_quantity)
+  list.each do |key, value|
+    if key == item
+     list[key] = new_quantity
+    end
+  end
+   p list
+end
 
 # Method to print a list and make it look pretty
-# input:
+# input: list (hash)
 # steps:
-# output:
+  #Create the method to print pretty list. Print a nice line identifying list.  Iterate through the hash printing first the value, the quantity of items on the list, then the item on the list.
+# output: Pretty list
+def pretty_up(list)
+  puts "\nHere is your grocery list: "
+  list.each do |key, value|
+    puts value.to_s + ' ' + key.to_s
+  end
+end
 
 # DRIVER CODE ************************************************************************************************************************
-list_remover(list_adder(create_list("carrots apples cereal pizza"), "Bagels"), "cereal")
-
+groceries = {"carrots"=>1, "apples"=>1, "cereal"=>1, "pizza"=>1, "oranges"=>5}
+pretty_up(groceries)
