@@ -69,3 +69,11 @@ end
 # DRIVER CODE ************************************************************************************************************************
 groceries = {"carrots"=>1, "apples"=>1, "cereal"=>1, "pizza"=>1, "oranges"=>5}
 pretty_up(groceries)
+
+groceries_2 ={}
+list_adder(groceries_2, "Lemonade", 2)
+list_adder(groceries_2, "Tomatoes", 3)
+list_adder(groceries_2, "Onions", 1)
+list_adder(groceries_2, "Ice Cream", 4)
+list_remover(groceries_2, "Lemonade")
+pretty_up(groceries_2)
