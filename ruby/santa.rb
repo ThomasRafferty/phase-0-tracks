@@ -64,5 +64,6 @@ p santas[0].get_mad_at("Dasher")
 p santas[6].celebrate_birthday
 p santas[0].age
 p santas[1].ethnicity
+p santas[11].gender("trans male")
 
 
