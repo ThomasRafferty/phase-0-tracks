@@ -1,8 +1,11 @@
+#reindeer_ranking = []
+
 class Santa
   def initialize(gender, ethnicity)
     @gender = gender
     @ethnicity = ethnicity
     @age = 0
+    @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
   end
 
   reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
@@ -20,17 +23,17 @@ class Santa
     @age = (age+1)
   end
 
-  def get_mad_at(input_array, reindeer_name)
-    input_array.each do |reindeer|
+  def get_mad_at(reindeer_name)
+    @reindeer_ranking.each do |reindeer|
       if reindeer_name == reindeer
-        rank = input_array.index(reindeer)
-        input_array.insert(-1, input_arradelete_at(rank))
+        rank = @reindeer_ranking.index(reindeer)
+        @reindeer_ranking.insert(-1, @reindeer_ranking.delete_at(rank))
       end
     end
   end
 
   #setter methods
-  def gender = (new_gender)
+  def gender(new_gender)
     @gender = new_gender
   end
 
@@ -53,8 +56,13 @@ genders.length.times do |i|
   santas << Santa.new(genders[i], ethnicities[i])
   puts "Hurray, SantaCon has grown! There are now #{santas.length} santas at SantaCon.  The more the merrier!"
 end
-p get_mad_at(reindeer_ranking, "Dasher")
-age
 
+
+
+p santas[0].get_mad_at("Dasher")
+#these only seem to work with index numbers??
+p santas[6].celebrate_birthday
+p santas[0].age
+p santas[1].ethnicity
 
 
