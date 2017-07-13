@@ -18,7 +18,13 @@ end
 
 
 #Driver Code#####################################
-santa = Santa.new
+santas = []
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A", "cis man", "trans female", "male", "gender questioning", "female"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "Iraqi", "white", "African American", "Native American", "Chinese"]
+example_genders.length.times do |i|
+  santas << Santa.new(example_genders[i], example_ethnicities[i])
+  puts "Hurray, SantaCon has grown! There are now #{santas.length} santas at SantaCon.  The more the merrier!"
+end
 
-santa.speak
-santa.eat_milk_and_cookies("chocolate chip")
+
+
