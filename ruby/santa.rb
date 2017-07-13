@@ -14,17 +14,47 @@ class Santa
   def eat_milk_and_cookies (cookie_type)
     puts "That was a good #{cookie_type}"
   end
+
+  #Have yet to test proper functioning
+  def celebrate_birthday
+    @age = (age+1)
+  end
+
+  def get_mad_at(input_array, reindeer_name)
+    input_array.each do |reindeer|
+      if reindeer_name == reindeer
+        rank = input_array.index(reindeer)
+        input_array.insert(-1, input_arradelete_at(rank))
+      end
+    end
+  end
+
+  #setter methods
+  def gender = (new_gender)
+    @gender = new_gender
+  end
+
+  #getter methods
+  def age
+    @age
+  end
+
+  def ethnicity
+    @ethnicity
+  end
 end
 
 
 #Driver Code#####################################
 santas = []
-example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A", "cis man", "trans female", "male", "gender questioning", "female"]
-example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "Iraqi", "white", "African American", "Native American", "Chinese"]
-example_genders.length.times do |i|
-  santas << Santa.new(example_genders[i], example_ethnicities[i])
+genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A", "cis man", "trans female", "male", "gender questioning", "female"]
+ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "Iraqi", "white", "African American", "Native American", "Chinese"]
+genders.length.times do |i|
+  santas << Santa.new(genders[i], ethnicities[i])
   puts "Hurray, SantaCon has grown! There are now #{santas.length} santas at SantaCon.  The more the merrier!"
 end
+p get_mad_at(reindeer_ranking, "Dasher")
+age
 
 
 
