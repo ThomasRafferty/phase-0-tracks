@@ -1,6 +1,7 @@
-#reindeer_ranking = []
-
 class Santa
+  attr_reader :age, :ethnicity
+  attr_accessor :gender
+
   def initialize(gender, ethnicity)
     @gender = gender
     @ethnicity = ethnicity
@@ -18,7 +19,6 @@ class Santa
     puts "That was a good #{cookie_type}"
   end
 
-  #Have yet to test proper functioning
   def celebrate_birthday
     @age = (age+1)
   end
@@ -30,20 +30,6 @@ class Santa
         @reindeer_ranking.insert(-1, @reindeer_ranking.delete_at(rank))
       end
     end
-  end
-
-  #setter methods
-  def gender(new_gender)
-    @gender = new_gender
-  end
-
-  #getter methods
-  def age
-    @age
-  end
-
-  def ethnicity
-    @ethnicity
   end
 end
 
@@ -57,13 +43,9 @@ genders.length.times do |i|
   puts "Hurray, SantaCon has grown! There are now #{santas.length} santas at SantaCon.  The more the merrier!"
 end
 
-
-
 p santas[0].get_mad_at("Dasher")
-#these only seem to work with index numbers??
 p santas[6].celebrate_birthday
 p santas[0].age
 p santas[1].ethnicity
-p santas[11].gender("trans male")
-
+p santas[11].gender = ("trans male")
 
