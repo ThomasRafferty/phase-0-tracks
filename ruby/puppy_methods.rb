@@ -29,6 +29,7 @@ class Puppy
     puts "Initializing new puppy instance"
   end
 
+
 end
 
 class Squirrel
