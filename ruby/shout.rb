@@ -7,3 +7,11 @@ module Shout
     words + "Eureka!!!!!!"
   end
 end
+
+#Driver Code##################################################
+
+p Shout.yell_happily("E = MC squared. ")
+p Shout.yell_angrily("Noooooo ")
+
+
+
