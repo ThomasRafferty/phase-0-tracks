@@ -21,7 +21,6 @@ grandma = Response.new
 p grandma.yell("In your hand. Dummy.")
 
 
-
 # module Shout
 #   def self.yell_angrily(words)
 #     words + "!!!" + " :("
@@ -34,10 +33,4 @@ p grandma.yell("In your hand. Dummy.")
 #Old Driver Code######################
 # p Shout.yell_happily("E = MC squared. ")
 # p Shout.yell_angrily("Noooooo ")
-
-
-
-
-
-
 
