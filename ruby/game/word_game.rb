@@ -6,3 +6,25 @@ class Word_game
 
   def initialize(player_1_input)
     @game_word = player_1_input
+    @guess_count = 0
+    @is_over = false
+  end
+
+  game_length = (@game_word.length)/2
+
+
+  def word_disuiser(word)
+    disguised_array = word.split("")
+   disguised_array.map! do |letter|
+     if letter == " "
+       letter = " "
+     else
+       letter = "-"
+     end
+   end
+   p disguised_array.join("")
+  end
+
+
+
+#Until game_length = guess_count then is_over = false
