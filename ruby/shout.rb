@@ -1,34 +1,26 @@
 module Shout
-  def yell
-
-class Umpire
-  include Shout
-end
-
-class
-
-module Flight
-  def take_off(altitude)
-    puts "Taking off and ascending until reaching #{altitude} ..."
+  def yell(words)
+    words.upcase + "!!!"
   end
 end
 
-class Bird
-  include Flight
+class Call
+  include Shout
 end
 
-class Plane
-  include Flight
+class Response
+  include Shout
 end
-
-#Driver Code################################################
-bird = Bird.new
-bird.take_off(800)
-
-plane = Plane.new
-plane.take_off(30000)
 
 #Driver Code##################################################
+
+grandpa = Call.new
+p grandpa.yell("Where is the the telephone?")
+
+grandma = Response.new
+p grandma.yell("In your hand. Dummy.")
+
+
 
 # module Shout
 #   def self.yell_angrily(words)
