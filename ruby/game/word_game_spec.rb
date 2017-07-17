@@ -1,9 +1,10 @@
 require_relative 'word_game'
 
-decribe Word_game do
-  let(:game_word) {Word_game.new("cat fish")}
+describe Word_game do
+  let(:game) {Word_game.new("cat")}
 
-  it "sets the input word as the game word"
-      do
-    expect(game_word).to eq ("cat fish")
+  it "adds words to guessed letter array" do
+    expect(game.add_guess_letter("a")).to eq ["a"]
   end
+
+end
