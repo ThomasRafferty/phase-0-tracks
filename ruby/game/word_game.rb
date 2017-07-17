@@ -2,7 +2,7 @@
 
  class Word_game
   attr_reader :game_length
-  attr_accessor :game_word_array, :guess_letter, :found_index, :progress_array #:game_hash
+  attr_accessor :game_word, :game_word_array, :guess_letter, :found_index, :progress_array, :guess_count, :is_over #:game_hash
 
   def initialize (word)
     @game_word = word
@@ -41,11 +41,38 @@
       x = "-"
       end
     end
+    if (@progress_array == @game_word_array) || (@guess_count == @game_length)
+      @is_over = true
+    end
+    @guess_count +=1
   end
 
-
+# ### Cannot get index to work properly, possibly with letter guesser
+#   def correct_guess_letter_index
+#     if @game_word_array.include? @guess_letter
+#        @found_index << @game_word_array.index(@guess_letter)
+#       p @found_index
+#     end
+#   end
 end
 
+# User interface################################################
+
+puts "Welcome to the Word Guesser Game!"
+puts "Player one please enter a word!"
+### I know there is a module to hide what player 1 inputs but I focused more on getting the program to work
+player1_word = gets.chomp
+game = Word_game.new(player1_word)
+
+while !game.is_over
+puts "Player 2 guess a letter!"
+guess = gets.chomp
+  p game.word_disguiser
+  p game.add_guess_letter(guess)
+  p game.letter_guesser(guess)
+end
+
+#Ideas that did not work but was considering coming back to.####
 
 ### Don't think has is the right direction but kept just in case came back to idea
 #  def create_game_hash
@@ -73,30 +100,3 @@ end
 #       end
 #    end
 #   p disguised_array.join("")
-
-### Cannot get index to work properly, possibly with letter guesser
-  def correct_guess_letter_index
-    if @game_word_array.include? @guess_letter
-       @found_index << @game_word_array.index(@guess_letter)
-      p @found_index
-    end
-  end
-
-
-
-# User interface###############################
-game = Word_game.new("cat")
-
-p game.game_word_array
-p game.add_guess_letter("c")
-p game.found_index
-p game.word_disguiser
-p game.letter_guesser("c")
-p game.letter_guesser("f")
-# p game.correct_guess_letter_index
-# p game.add_guess_letter("f")
-# p game.correct_guess_letter_index
-# p game.add_guess_letter("d")
-# game.word_disguiser
-# p game.disguised_array
-# #p game.already_guess_letter#
