@@ -2,7 +2,7 @@
 
  class Word_game
   attr_reader :game_length
-  attr_accessor :game_word_array, :guess_letter, :found_index #:game_hash
+  attr_accessor :game_word_array, :guess_letter, :found_index, :progress_array #:game_hash
 
   def initialize (word)
     @game_word = word
@@ -29,12 +29,12 @@
       letter = "-"
     end
    end
-  @disguised_array.join("")
+  p @disguised_array.join("")
  end
 
    def letter_guesser(letter)
-    disguised_array = @game_word.split("")
-    disguised_array.map! do |x|
+    @progress_array = @game_word.split("")
+    @progress_array .map! do |x|
       if x == letter
        x = x
       else
@@ -85,7 +85,7 @@ end
 
 
 # User interface###############################
-game = Word_game.new("cat fish")
+game = Word_game.new("cat")
 
 p game.game_word_array
 p game.add_guess_letter("c")
