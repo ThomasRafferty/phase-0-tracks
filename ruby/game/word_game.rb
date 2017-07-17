@@ -63,13 +63,12 @@ puts "Player one please enter a word!"
 ### I know there is a module to hide what player 1 inputs but I focused more on getting the program to work
 player1_word = gets.chomp
 game = Word_game.new(player1_word)
-
 while !game.is_over
 puts "Player 2 guess a letter!"
 guess = gets.chomp
   p "The secret word is this long!"
   p game.word_disguiser
-  p "Here are the letters you have guessed so far."
+  p "Here are the letters you have guessed  # far."
   p game.add_guess_letter(guess)
   p puts "you have made this much progress!"
   p game.letter_guesser(guess)
