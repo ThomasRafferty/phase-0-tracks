@@ -2,13 +2,13 @@
 
  class Word_game
   attr_reader :guess_count, :game_word, :guess_array
-  attr_accessor :guess_letter_array
+  attr_accessor :guess_letter
 
-  def initialize(player_1_input)
-    @game_word = player_1_input
+  def initialize (word)
+    @game_word = word
     @guess_count = 0
     @guess_letter_array = []
-    #might us loop @is_over = false
+    @is_over = false
   end
 
   def add_guess_letter (guess)
@@ -16,17 +16,32 @@
     @guess_letter_array << (@guess_letter)
   end
 
-  def already_guess_letter
-    @guess_letter_array.each do
-      @guess_letter_array == @guess_letter
+  def word_disuiser
+  disguised_array = @game_word.split("")
+      disguised_array.map! do |letter|
+       if @guess_letter_array.include? letter
+         letter = @guess_letter
+        elsif letter == " "
+         letter = " "
+       else
+         letter = "-"
+       end
     end
+   p disguised_array.join("")
   end
+
+  #def guess_checker
+
 end
 
 
 
-
+# User interface###################
 game = Word_game.new("cat fish")
 
+
 p game.add_guess_letter("c")
-p game.already_guess_letter
+p game.add_guess_letter("f")
+p game.add_guess_letter("d")
+game.word_disuiser
+#p game.already_guess_letter
