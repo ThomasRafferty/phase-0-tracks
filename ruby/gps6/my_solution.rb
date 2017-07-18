@@ -4,7 +4,7 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
+# Require_relative imports data from a file that is in a relative location calling on that file within quotation marks.
 #
 require_relative 'state_data'
 
