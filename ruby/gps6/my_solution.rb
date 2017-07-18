@@ -23,7 +23,8 @@ class VirusPredictor
     speed_of_spread #(@population_density, @state)
   end
 
-  private
+private
+
 #Method calculates the impact of the influence will likely have on the population within a given state.  It makes this calculation using conditional statements based on calculation density. Then prints that data for that given state.
   def predicted_deaths #(population_density, population, state)
     # predicted deaths is solely based on population density
