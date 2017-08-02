@@ -22,5 +22,26 @@ sqlite> SELECT * FROM books
 7|Understanding Trump|Newt Gingrich|2017-07-13|7
 8|Option B|Sheryl Sandberg and Adam Grant|2017-04-24|8
 
+3.
+sqlite> SELECT * FROM books, publishers WHERE publisher_id = publishers.id;
+1|Devil's Bargin|Joshua Green|2017-07-18|1|1|Penguin Press
+2|Astrophysics for People in a Hurry|Neil deGrasse Tyson|2017-05-02|2|2|Norton
+3|Hillbilly Elegy|J. D. Vance|2016-02-28|3|3|Harper Collins
+4|Al Franken, Giant of the Senate|Al Franken|2017-05-30|4|4|Tweleve
+5|Dangerous|Milo Yiannopoloulos|2017-07-05|5|5|Dangerous Books
+6|Rediscovering Americanism|Mark R. Levin|2017-07-27|6|6|Thershold Editions
+7|Understanding Trump|Newt Gingrich|2017-07-13|7|7|Center Street
+8|Option B|Sheryl Sandberg and Adam Grant|2017-04-24|8|8|Knopf
+
+4.
+sqlite> SELECT books.title, books.author, publishers.publisher FROM books JOIN publishers ON books.publisher_id = publishers.id;
+Devil's Bargin|Joshua Green|Penguin Press
+Astrophysics for People in a Hurry|Neil deGrasse Tyson|Norton
+Hillbilly Elegy|J. D. Vance|Harper Collins
+Al Franken, Giant of the Senate|Al Franken|Tweleve
+Dangerous|Milo Yiannopoloulos|Dangerous Books
+Rediscovering Americanism|Mark R. Levin|Thershold Editions
+Understanding Trump|Newt Gingrich|Center Street
+Option B|Sheryl Sandberg and Adam Grant|Knopf
 
 
