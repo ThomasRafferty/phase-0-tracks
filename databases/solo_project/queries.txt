@@ -44,4 +44,15 @@ Rediscovering Americanism|Mark R. Levin|Thershold Editions
 Understanding Trump|Newt Gingrich|Center Street
 Option B|Sheryl Sandberg and Adam Grant|Knopf
 
+5.
+sqlite> DELETE FROM books WHERE author = "Milo Yiannopoloulos";
+sqlite> SELECT * FROM books;
+1|Devil's Bargin|Joshua Green|2017-07-18|1
+2|Astrophysics for People in a Hurry|Neil deGrasse Tyson|2017-05-02|2
+3|Hillbilly Elegy|J. D. Vance|2016-02-28|3
+4|Al Franken, Giant of the Senate|Al Franken|2017-05-30|4
+6|Rediscovering Americanism|Mark R. Levin|2017-07-27|6
+7|Understanding Trump|Newt Gingrich|2017-07-13|7
+8|Option B|Sheryl Sandberg and Adam Grant|2017-04-24|8
+
 
