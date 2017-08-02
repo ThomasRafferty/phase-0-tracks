@@ -1,3 +1,4 @@
+Release 2
 1.
 sqlite> SELECT * FROM books;
 1|Devil's Bargin|Joshua Green|2017-07-18|1
@@ -55,4 +56,89 @@ sqlite> SELECT * FROM books;
 7|Understanding Trump|Newt Gingrich|2017-07-13|7
 8|Option B|Sheryl Sandberg and Adam Grant|2017-04-24|8
 
+Release 3
+1. There are many types of joins available in SQL but there are three major categories: The Cross Join; The Inner Join; and The Outer Join. Each of these districts the program to out put data based on the relationship specified by the join.  Joins can have conditions.  For diagrams and a more thorough explanation got to this sight. (https://www.codeproject.com/Articles/33052/Visual-Representation-of-SQL-Joins).  
 
+2.
+LEFT JOIN (RIGHT and FULL OUTER Joins not currently supported in my SQLite3)
+
+sqlite> SELECT books.title, books.date_published, publishers.publisher FROM books LEFT JOIN publishers ON books.publisher_id = publishers.id;
+Devil's Bargin|2017-07-18|Penguin Press
+Astrophysics for People in a Hurry|2017-05-02|Norton
+Hillbilly Elegy|2016-02-28|Harper Collins
+Al Franken, Giant of the Senate|2017-05-30|Tweleve
+Rediscovering Americanism|2017-07-27|Thershold Editions
+Understanding Trump|2017-07-13|Center Street
+Option B|2017-04-24|Knopf
+
+INNER JOIN (due to data of tables same output at LEFT JOIN)
+
+sqlite> SELECT books.title, books.date_published, publishers.publisher FROM books INNER  JOIN publishers ON books.publisher_id = publishers.id;
+Devil's Bargin|2017-07-18|Penguin Press
+Astrophysics for People in a Hurry|2017-05-02|Norton
+Hillbilly Elegy|2016-02-28|Harper Collins
+Al Franken, Giant of the Senate|2017-05-30|Tweleve
+Rediscovering Americanism|2017-07-27|Thershold Editions
+Understanding Trump|2017-07-13|Center Street
+Option B|2017-04-24|Knopf
+
+
+Below is a CROSS JOIN, this table inaccurately displays every publisher on each book.  Without dramatically changing my tables I have be unable to create a CROSS JOIN that is correct.
+
+sqlite> SELECT books.author, publishers.publisher FROM books CROSS JOIN publishers;
+Joshua Green|Penguin Press
+Joshua Green|Norton
+Joshua Green|Harper Collins
+Joshua Green|Tweleve
+Joshua Green|Dangerous Books
+Joshua Green|Thershold Editions
+Joshua Green|Center Street
+Joshua Green|Knopf
+Neil deGrasse Tyson|Penguin Press
+Neil deGrasse Tyson|Norton
+Neil deGrasse Tyson|Harper Collins
+Neil deGrasse Tyson|Tweleve
+Neil deGrasse Tyson|Dangerous Books
+Neil deGrasse Tyson|Thershold Editions
+Neil deGrasse Tyson|Center Street
+Neil deGrasse Tyson|Knopf
+J. D. Vance|Penguin Press
+J. D. Vance|Norton
+J. D. Vance|Harper Collins
+J. D. Vance|Tweleve
+J. D. Vance|Dangerous Books
+J. D. Vance|Thershold Editions
+J. D. Vance|Center Street
+J. D. Vance|Knopf
+Al Franken|Penguin Press
+Al Franken|Norton
+Al Franken|Harper Collins
+Al Franken|Tweleve
+Al Franken|Dangerous Books
+Al Franken|Thershold Editions
+Al Franken|Center Street
+Al Franken|Knopf
+Mark R. Levin|Penguin Press
+Mark R. Levin|Norton
+Mark R. Levin|Harper Collins
+Mark R. Levin|Tweleve
+Mark R. Levin|Dangerous Books
+Mark R. Levin|Thershold Editions
+Mark R. Levin|Center Street
+Mark R. Levin|Knopf
+Newt Gingrich|Penguin Press
+Newt Gingrich|Norton
+Newt Gingrich|Harper Collins
+Newt Gingrich|Tweleve
+Newt Gingrich|Dangerous Books
+Newt Gingrich|Thershold Editions
+Newt Gingrich|Center Street
+Newt Gingrich|Knopf
+Sheryl Sandberg and Adam Grant|Penguin Press
+Sheryl Sandberg and Adam Grant|Norton
+Sheryl Sandberg and Adam Grant|Harper Collins
+Sheryl Sandberg and Adam Grant|Tweleve
+Sheryl Sandberg and Adam Grant|Dangerous Books
+Sheryl Sandberg and Adam Grant|Thershold Editions
+Sheryl Sandberg and Adam Grant|Center Street
+Sheryl Sandberg and Adam Grant|Knopf
