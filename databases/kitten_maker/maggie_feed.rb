@@ -9,10 +9,11 @@ feed_db.results_as_hash = true
 # feed_morning = []
 # feed_evening = []
 
+# SQL DATE entry format "YYYY-MM-DD"
 create_feed_table = <<-SQL
   CREATE TABLE IF NOT EXISTS feed_table (
   id INTEGER PRIMARY KEY,
-  feed_date DATE,  # SQL entry format "YYYY-MM-DD"
+  feed_date DATE,
   feed_status BOOLEAN
   )
 SQL
@@ -22,7 +23,7 @@ feed_db.execute(create_feed_table)
 
 #This method will input a feeding into a hash to tracking feedings
 def feed_pet (feed_db, feed_date, feed_status)
-  feed_db.execute("INSERT INTO feed_table (feed_date, feed_status) VALUES (?, ?)", [feed_date, feed_status])
+  feed_table.execute("INSERT INTO feed_table (feed_date, feed_status) VALUES (?, ?)", [feed_date, feed_status])
 end
 
 
@@ -44,7 +45,7 @@ end
 
 
 #DRIVER CODE#############################
-puts "Please enter the month date."
-current_month = gets.chomp
-month_creator(current_month)
-p months
+# puts "Please enter the month date."
+# current_month = gets.chomp
+# month_creator(current_month)
+# p months#
