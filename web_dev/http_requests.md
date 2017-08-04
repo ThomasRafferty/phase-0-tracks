@@ -7,7 +7,7 @@
   4. 4xx - Represents a client-side error
   5. 5xx - Represents a server-side error
 
-#### Common HTTP Codes
+#### Common HTTP Status Codes
 
 1. 200
   * Code starts with 2 which represents a successful request (2xx)
