@@ -23,10 +23,10 @@ SQL
 db.execute(create_table_cmd)
 
 # add a test kitten
-# db.execute("INSERT INTO kittens (name, age) VALUES ('Bob', 10)")
+db.execute("INSERT INTO kittens (name, age) VALUES ('Bob', 10)")
 
 # add LOOOOTS of kittens!
-# so. many. kittens. 
+# so. many. kittens.
 #KittenExplosion
 def create_kitten(db, name, age)
   db.execute("INSERT INTO kittens (name, age) VALUES (?, ?)", [name, age])

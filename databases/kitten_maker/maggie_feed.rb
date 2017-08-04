@@ -14,18 +14,31 @@ create_feed_table = <<-SQL
   CREATE TABLE IF NOT EXISTS feed_table (
   id INTEGER PRIMARY KEY,
   feed_date DATE,
-  feed_status BOOLEAN
+  scoops_feed INT
   )
 SQL
 
 feed_db.execute(create_feed_table)
-#Build method to check if pet has been fed
+
+# add a test feeding
+feed_db.execute("INSERT INTO feed_table (feed_date, scoops_feed) VALUES ('0001-01-01',2)")
+
+#Build method to print feed table
+
+#   feed_tablev = <<-SQL1
+#     SELECT * FROM feed_table
+#   SQL1
+#
+#  check if pet has been fed
 
 #This method will input a feeding into a hash to tracking feedings
-def feed_pet (feed_db, feed_date, feed_status)
-  feed_table.execute("INSERT INTO feed_table (feed_date, feed_status) VALUES (?, ?)", [feed_date, feed_status])
-end
+# def feed_pet (feed_db, feed_date, feed_status)
+   # feed_db.execute("INSERT INTO feed_table (     feed_date, feed_status) VALUES (?, ?)", [    #feed_date, feed_status])
+# end
 
+# feed_pet(feed_db, "0001-01-02", true)
+
+# p feed_tablev
 
 # def month_creator (input_month)
 #   month_exists = false
@@ -42,10 +55,8 @@ end
 # end
 
 
-
-
 #DRIVER CODE#############################
 # puts "Please enter the month date."
 # current_month = gets.chomp
 # month_creator(current_month)
-# p months#
+# p months
