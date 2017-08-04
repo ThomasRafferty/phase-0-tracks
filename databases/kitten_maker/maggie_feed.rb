@@ -1,13 +1,11 @@
-
-#This program hopes to allow users to input when they feed their pet and allows for queries to see if their pet was feed.  Maggie is my dog.  An interaction between the feed database allowing for both input data of being feed and checking if that input (feed for that day - hopefully can build in a morning and night feature).
+#This program hopes to allow users to input when they feed their pet and allows for queries to see if their pet was feed.  Maggie is my dog.  An interaction between the feed database allowing for both input data of being feed and checking if ones pet has been feed that day.
 #Not building to adjust for years, assuming one year (2017).  Program could be updated in the future to handle this, or a new iteration could be created in the new year.
 
 require "sqlite3"
+require "table_print"
 
 feed_db = SQLite3::Database.new("maggie_feed.db")
 feed_db.results_as_hash = true
-# feed_morning = []
-# feed_evening = []
 
 # SQL DATE entry format "YYYY-MM-DD"
 create_feed_table = <<-SQL
@@ -21,22 +19,40 @@ SQL
 feed_db.execute(create_feed_table)
 
 # add a test feeding
-feed_db.execute("INSERT INTO feed_table (feed_date, scoops_feed) VALUES ('0001-01-01',2)")
-
-#Build method to print feed table
-
-#   feed_tablev = <<-SQL1
-#     SELECT * FROM feed_table
-#   SQL1
-#
-#  check if pet has been fed
+#feed_db.execute("INSERT INTO feed_table (feed_date, scoops_feed) VALUES ('0001-01-01',2)")
 
 #This method will input a feeding into a hash to tracking feedings
-# def feed_pet (feed_db, feed_date, feed_status)
-   # feed_db.execute("INSERT INTO feed_table (     feed_date, feed_status) VALUES (?, ?)", [    #feed_date, feed_status])
-# end
+ def feed_pet (feed_db, feed_date, scoops_feed)
+    feed_db.execute("INSERT INTO feed_table (     feed_date, scoops_feed) VALUES (?, ?)", [    feed_date, scoops_feed])
+ end
+# Test feed_pet method
+# feed_pet(feed_db, "0001-01-02", 3)
 
-# feed_pet(feed_db, "0001-01-02", true)
+#Build a method to see if the current data is in the database
+def check_feed (feed_db, check_date)
+  feed_db.execute("SELECT * FROM feed_table WHERE feed_date = #{check_date}")
+end
+
+
+
+
+
+
+#Build method to print feed table
+#Both still do not work
+show_feed_table = <<-SQL1
+  SELECT * FROM feed_table
+SQL1
+
+feed_db.execute("SELECT * FROM feed_table")
+
+
+ #check if pet has been fed
+
+
+
+
+
 
 # p feed_tablev
 
