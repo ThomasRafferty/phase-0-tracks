@@ -4,14 +4,14 @@
   <title>Learning jQuery</title>
 </head>
 <body>
-  <h1 class='header'>Learning how to use JQuery!!!</h1>
+  <h1 class=>Learning how to use JQuery!!!</h1>
   <br>
   <p>Its going to be super helpful.</p>
   <p>Dive deeper into this rabbit hold later</p>
   <button>Click Here to learn more</button>
   <br>
   <ul><strong>Important things to note about jQuery</strong>
-    <li id="connection">Have to put script src for jQuery above $(function(){...}; the later being where the JavaScript code goes</li>
+    <li class="powerful_child">Have to put script src for jQuery above $(function(){...}; the later being where the JavaScript code goes</li>
     <li id="note">jQuery is 0 indexed</li>
   </ul>
 
@@ -19,7 +19,8 @@
 <script>
   $(function(){
 
-    // $('#c')
+   //  Could not get this to run properly, would need to look into the documentation more to figure out my error but I have acceded the time block.
+   //$(".powerful_child").parent.height='400px';
 
     $("#note").on("click", function(){
       $(this).slideToggle(200);
