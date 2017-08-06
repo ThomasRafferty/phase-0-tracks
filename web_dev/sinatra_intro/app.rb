@@ -46,6 +46,25 @@ get '/students/:id' do
   student.to_s
 end
 
+get '/great_job/students/:name' do
+  name = db.execute("SELECT name FROM students")
+  ## name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
+
+
+## get '/great_job/students/:name' do
+##   student = db.execute("SELECT name FROM students")
+##   ## if name
+##     "Good job, #{name}!"
+## ##  else
+## ##    "Good job!"
+## ##  end
+## end
 
 #Work I added#########
 
@@ -56,3 +75,4 @@ end
 get '/:name/is/:age' do
   "#{params[:name]} is #{params[:age]} years old."
 end
+
