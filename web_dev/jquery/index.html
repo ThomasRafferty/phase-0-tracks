@@ -7,20 +7,25 @@
   <h1 class='header'>Learning how to use JQuery!!!</h1>
   <br>
   <p>Its going to be super helpful.</p>
+  <p>Dive deeper into this rabbit hold later</p>
   <button>Click Here to learn more</button>
   <br>
   <ul><strong>Important things to note about jQuery</strong>
-    <li id="note">Have to put script src for jQuery above $(function(){...}; the later being where the JavaScript code goes</li>
-    <li>jQuery is 0 indexed</li>
+    <li id="connection">Have to put script src for jQuery above $(function(){...}; the later being where the JavaScript code goes</li>
+    <li id="note">jQuery is 0 indexed</li>
   </ul>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
   $(function(){
 
-    $('#note').on('click', function(){
-      $('#note').slideToggle(400);
+    // $('#c')
+
+    $("#note").on("click", function(){
+      $(this).slideToggle(200);
     });
+
+    $("p:last").css({"color": "red", "border": "1px solid blue"});
 
   });
 </script>
