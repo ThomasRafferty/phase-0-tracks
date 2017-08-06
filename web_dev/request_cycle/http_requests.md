@@ -39,3 +39,5 @@
 ## Difference between HTTP Methods: GET vs. POST
 
 Put very simply the GET method request data from a specific resources while the POST submits data to be processed to a specific resource.  On multiple sites it discusses that sensitive data should not be transmitted via GET because this data is logged and accessible to third parties while it makes it way through between computer/servers.  Along these lines, GET requests are cached unlike POST requests, however data in a POST method might be used to create or update a resource.
+
+An HTTP Cookies is a small piece of information which is sent from a website on is browsing to the individuals computer.  This piece of information allows the web site to know which user is interacting with it, remembering things from click history, what is in one's shopping cart or one's log-in information.  Cookies are necessary to interact with the web smoothly without having to constantly be reentering user information, yet can also be used to track individuals web use.
