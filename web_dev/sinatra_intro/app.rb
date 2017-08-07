@@ -43,28 +43,19 @@ end
 
 get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
-  student.to_s
+  p student.to_s
 end
 
-get '/great_job/students/:name' do
-  name = db.execute("SELECT name FROM students")
-  ## name = params[:name]
-  if name
+get '/students/great_job/?:id?' do
+    student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[3]
+  student.to_s
+  name = student
+  if name != nil
     "Good job, #{name}!"
   else
     "Good job!"
   end
 end
-
-
-## get '/great_job/students/:name' do
-##   student = db.execute("SELECT name FROM students")
-##   ## if name
-##     "Good job, #{name}!"
-## ##  else
-## ##    "Good job!"
-## ##  end
-## end
 
 #Work I added#########
 
