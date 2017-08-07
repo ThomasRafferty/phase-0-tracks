@@ -71,12 +71,22 @@ get '/great_job' do
   end
 end
 
-# get '/math/:num1/:num2' do
-#   bers = []
-#   bers.push(params[:num1]).to_i
-#   bers.push(params[:num2]).to_i
+
+#I could not figure out how to convert these to integers at all :(
+
+# get '/add/:number1/:number2' do
+#   numbers = []
+#   numbers.push(params[:number1]).to_i
+#   numbers.push(params[:num2ber]).to_i
 # end
 
-get '/math/:num1/:num2' do
+# get '/add/:number1/:number2' do
+#   @number1.to_i
+#   @number2.to_i
+#   p @num2 + @num1
+# end
 
-end
+# get '/add/:number1/number2 do
+#   sum = number1.to_i + number2
+#   p sum
+# end
