@@ -9,6 +9,10 @@ db.results_as_hash = true
 # add a query parameter
 # GET /
 
+get '/' do
+  "Hello World"
+end
+
 get '/:name/is/:age' do
   "#{params[:name]} is #{params[:age]} years old."
 end
@@ -46,16 +50,6 @@ get '/students/:id' do
   p student.to_s
 end
 
-get '/students/great_job/?:id?' do
-    student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[3]
-  student.to_s
-  name = student
-  if name != nil
-    "Good job, #{name}!"
-  else
-    "Good job!"
-  end
-end
 
 #Work I added#########
 
@@ -67,3 +61,32 @@ get '/:name/is/:age' do
   "#{params[:name]} is #{params[:age]} years old."
 end
 
+
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+end
+
+
+#I could not figure out how to convert these to integers at all :(
+
+# get '/add/:number1/:number2' do
+#   numbers = []
+#   numbers.push(params[:number1]).to_i
+#   numbers.push(params[:num2ber]).to_i
+# end
+
+# get '/add/:number1/:number2' do
+#   @number1.to_i
+#   @number2.to_i
+#   p @num2 + @num1
+# end
+
+# get '/add/:number1/number2 do
+#   sum = number1.to_i + number2
+#   p sum
+# end
